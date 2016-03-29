@@ -8,6 +8,7 @@
 
 #import "ViewController.h"
 #import "AYDatePicker.h"
+#import "AYPickerView.h"
 
 @interface ViewController ()
 
@@ -27,9 +28,13 @@
 }
 
 - (IBAction)onClick:(id)sender {
-    [[AYDatePicker datePickerWithResultHandle:^(UIDatePicker *datePicker, NSDate *date) {
-        NSLog(@"%@", date);
-        [_btn setTitle:[date description] forState:0];
+//    [[AYDatePicker datePickerWithResultHandle:^(UIDatePicker *datePicker, NSDate *date) {
+//        NSLog(@"%@", date);
+//        [_btn setTitle:[date description] forState:0];
+//    }] show];
+    
+    [[AYPickerView pickerViewWithData:@[@"11", @"22", @"33"] handler:^(NSUInteger index, NSString *selectedData) {
+        NSLog(@"%ld  %@", index, selectedData);
     }] show];
 }
 

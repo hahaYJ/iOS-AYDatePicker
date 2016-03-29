@@ -71,14 +71,7 @@
 }
 
 - (void)dismissDateSet {
-    [UIView animateWithDuration:0.3 animations:^{
-        [_pickerView setFrame:CGRectMake(_pickerView.frame.origin.x,
-                                         SCREEN_HEIGHT,
-                                         _pickerView.frame.size.width,
-                                         _pickerView.frame.size.height)];
-    } completion:^(BOOL finished) {
-        [self removeFromSuperview];
-    }];
+    [self animateHide];
     [self didConfirm];
 }
 
@@ -90,25 +83,33 @@
 }
 
 - (void)cancelDateSet{
+    [self animateHide];
+    [self didCancel];
+}
+
+- (void)animateHide {
     [UIView animateWithDuration:0.3 animations:^{
         [_pickerView setFrame:CGRectMake(_pickerView.frame.origin.x,
                                          SCREEN_HEIGHT,
                                          _pickerView.frame.size.width,
                                          _pickerView.frame.size.height)];
+        self.backgroundColor = [UIColor clearColor];
     } completion:^(BOOL finished) {
         [self removeFromSuperview];
     }];
-    [self didCancel];
 }
 
-
+- (void)animateShow {
+    [UIView animateWithDuration:0.3f animations:^{
+        [_pickerView setFrame:CGRectMake(0, SCREEN_HEIGHT - _pickerView.frame.size.height, SCREEN_WIDTH, 250)];
+        self.backgroundColor = [UIColor colorWithRed:0 green:0 blue:0 alpha:0.3];
+    }];
+}
 
 - (void)show {
     UIWindow *keyWindow = [UIApplication sharedApplication].keyWindow;
     [keyWindow addSubview:self];
-    [UIView animateWithDuration:0.3f animations:^{
-        [_pickerView setFrame:CGRectMake(0, SCREEN_HEIGHT - _pickerView.frame.size.height, SCREEN_WIDTH, 250)];
-    }];
+    [self animateShow];
 }
 
 @end

@@ -16,6 +16,7 @@
 		8882692D1CA82F0A00E31501 /* AYDatePickerTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 8882692C1CA82F0A00E31501 /* AYDatePickerTests.m */; };
 		8882693C1CA82F8900E31501 /* AYActionPlane.m in Sources */ = {isa = PBXBuildFile; fileRef = 888269391CA82F8900E31501 /* AYActionPlane.m */; };
 		8882693D1CA82F8900E31501 /* AYDatePicker.m in Sources */ = {isa = PBXBuildFile; fileRef = 8882693B1CA82F8900E31501 /* AYDatePicker.m */; };
+		888269401CAACEF900E31501 /* AYPickerView.m in Sources */ = {isa = PBXBuildFile; fileRef = 8882693F1CAACEF900E31501 /* AYPickerView.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -46,6 +47,8 @@
 		888269391CA82F8900E31501 /* AYActionPlane.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AYActionPlane.m; sourceTree = "<group>"; };
 		8882693A1CA82F8900E31501 /* AYDatePicker.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AYDatePicker.h; sourceTree = "<group>"; };
 		8882693B1CA82F8900E31501 /* AYDatePicker.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AYDatePicker.m; sourceTree = "<group>"; };
+		8882693E1CAACEF900E31501 /* AYPickerView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AYPickerView.h; sourceTree = "<group>"; };
+		8882693F1CAACEF900E31501 /* AYPickerView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AYPickerView.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -125,6 +128,8 @@
 				888269391CA82F8900E31501 /* AYActionPlane.m */,
 				8882693A1CA82F8900E31501 /* AYDatePicker.h */,
 				8882693B1CA82F8900E31501 /* AYDatePicker.m */,
+				8882693E1CAACEF900E31501 /* AYPickerView.h */,
+				8882693F1CAACEF900E31501 /* AYPickerView.m */,
 			);
 			path = AYActionPlane;
 			sourceTree = "<group>";
@@ -229,6 +234,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				888269401CAACEF900E31501 /* AYPickerView.m in Sources */,
 				8882691A1CA82F0900E31501 /* ViewController.m in Sources */,
 				888269171CA82F0900E31501 /* AppDelegate.m in Sources */,
 				8882693C1CA82F8900E31501 /* AYActionPlane.m in Sources */,
@@ -422,6 +428,7 @@
 				888269331CA82F0A00E31501 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		888269341CA82F0A00E31501 /* Build configuration list for PBXNativeTarget "AYDatePickerTests" */ = {
 			isa = XCConfigurationList;
@@ -430,6 +437,7 @@
 				888269361CA82F0A00E31501 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
